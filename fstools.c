@@ -144,8 +144,7 @@ int findDirs(char *path, gamedata_t *gamedata, int startnum, config_t *config){
 	// gamedata: An instance of the linked-list of game data
 	// startnum: The starting number to tag each found 'game' with the next auto-incrementing ID
 	
-	char drive, old_drive;
-	char drive_letter, old_drive_letter;
+	unsigned int old_drive;
 	char status;
 	int go;
 	int found;
@@ -180,7 +179,7 @@ int findDirs(char *path, gamedata_t *gamedata, int startnum, config_t *config){
 	}
 	
 	/* save curdrive */
-	_dos_getdrive(old_drive);
+	_dos_getdrive(&old_drive);
 	if (old_drive < 0){
 		printf("%s.%d\t Unable to save current drive [status:%d]\n", __FILE__, __LINE__, old_drive);
 		return -1;
@@ -261,7 +260,7 @@ int findDirs(char *path, gamedata_t *gamedata, int startnum, config_t *config){
 	}
 	
 	/* reload current drive and directory */
-	_dos_setdrive(old_drive);
+	_dos_setdrive(old_drive, &old_drive);
 	status = chdir(old_dir_buffer);
 	if (status != 0){
 		printf("%s.%d\t Unable to restore directory [status:%d\n", __FILE__, __LINE__, status);
