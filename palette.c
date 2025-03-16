@@ -104,9 +104,8 @@ int pal_BMPRemap(bmpdata_t *bmpdata){
 
 	unsigned char *px;
 	unsigned char c;
-	int i;
 	int pos;
-	int px_remapped, colours_remapped, remapped;
+	int px_remapped, colours_remapped;
 	
 	px_remapped = 0;
 	colours_remapped = 0;

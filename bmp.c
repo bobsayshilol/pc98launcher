@@ -35,11 +35,10 @@ int bmp_ReadImage(FILE *bmp_image, bmpdata_t *bmpdata, unsigned char header, uns
 		fclose(f);
 	*/
 	
-	unsigned char	*bmp_ptr, *bmp_ptr_old;	// Represents which row of pixels we are reading at any time
+	unsigned char	*bmp_ptr;	// Represents which row of pixels we are reading at any time
 	int 				i;			// A loop counter
 	int				status;		// Generic status for calls from fread/fseek etc.
-	unsigned char 	pixel;		// A single pixel
-	unsigned char	r,g,b,a;
+	unsigned char	r,g,b;
 
 	if (header){
 		// Seek to dataoffset position in header
@@ -402,8 +401,6 @@ int bmp_ReadFont(FILE *bmp_image, bmpdata_t *bmpdata, fontdata_t *fontdata, unsi
 	int height_chars;
 	int row_bytepos;
 	int i;
-	char b;
-	unsigned char *p_dest, *p_src;
 	
 	if (header){
 		// Extract bmp header

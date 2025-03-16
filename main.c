@@ -54,7 +54,6 @@ int main() {
 	int scrape_dirs;						// NUmber of directories being scraped
 	int scrape_progress_chunk_size;			// Size of progress bar increase per directory being scraped
 	int progress;							// Progress bar percentage
-	int super;								// Supervisor mode flag
 	int found, found_tmp;					// Number of gamedirs/games found
 	int verbose;							// Controls output of additional logging/text
 	int status;								// Generic function return status variable
@@ -66,7 +65,6 @@ int main() {
 	
 	state_t *state = NULL;
 	bmpdata_t *screenshot_bmp = NULL;	
-	bmpstate_t *screenshot_bmp_state = NULL;	
 	gamedata_t *gamedata = NULL;			// An initial gamedata record for the first game directory we read
 	gamedata_t *gamedata_head = NULL;		// Constant pointer to the start of the gamedata list
 	launchdat_t *launchdat = NULL;			// When a single game is selected, we attempt to load its metadata file from disk

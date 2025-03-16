@@ -193,7 +193,6 @@ int gfx_GetXYaddr(int x, int y){
 	// Turn a screen x/y coordinate into an offset into a vram buffer
 	
 	unsigned int addr;
-	unsigned short row;
 	
 	addr = 0x00;
 	addr += GFX_ROW_SIZE * y;
@@ -215,11 +214,10 @@ int gfx_Bitmap(int x, int y, bmpdata_t *bmpdata){
 	//
 	// Bitmaps wider or taller than the screen are UNSUPPORTED
 	
-	int row, col;			//  x and y position counters
+	int row;			//  x position counter
 	int start_addr;		// The first pixel
 	int width_bytes;		// Number of bytes in one row of the image
 	int skip_cols;			// Skip first or last pixels of a row if the image is partially offscreen
-	int skip_bytes;
 	int skip_rows;		// Skip this number of rows if the image is patially offscreen
 	int total_rows	;		// Total number of rows to read in clip mode
 	unsigned char *ptr;	// Pointer to current location in bmp pixel buffer
@@ -549,7 +547,7 @@ int gfx_Puts(int x, int y, fontdata_t *fontdata, char *c){
 	unsigned int	row_offset;
 	unsigned char	font_symbol;
 	unsigned char	font_row;
-	unsigned char	i, w;
+	unsigned char	i;
 	unsigned char	pos;
 	unsigned char	*src, *dst;
 	

@@ -248,7 +248,6 @@ int ui_DrawFilterPopup(state_t *state, int toggle){
 	// Draw a page of filter choices for the user to select
 	
 	int i;
-	int status;
 	
 	// Draw drop-shadow
 	gfx_BoxFillTranslucent(40, 50, GFX_COLS - 30, GFX_ROWS - 20, PALETTE_UI_DGREY);
@@ -345,8 +344,6 @@ int ui_DrawInfoBox(){
 int	ui_DrawLaunchPopup(state_t *state, gamedata_t *gamedata, launchdat_t *launchdat, int toggle){
 	// Draw the popup window that lets us select from the main or alternate start file
 	// in order to launch a game
-	
-	int status;	
 	
 	// Draw drop-shadow
 	gfx_BoxFillTranslucent(ui_launch_popup_xpos + 10, ui_launch_popup_ypos + 10, ui_launch_popup_xpos + 10 + ui_launch_popup_width, ui_launch_popup_ypos + 10 + ui_launch_popup_height, PALETTE_UI_DGREY);
@@ -933,7 +930,6 @@ int ui_UpdateInfoPane(state_t *state, gamedata_t *gamedata, launchdat_t *launchd
 	// Clear text on load
 	// snprintf instead of sprintf to limit string sizes
 	
-	int			status;
 	char		status_msg[64];		// Message buffer for anything needing to be printed onscreen
 	char		info_name[64];
 	char		info_year[8];
@@ -943,8 +939,6 @@ int ui_UpdateInfoPane(state_t *state, gamedata_t *gamedata, launchdat_t *launchd
 	char		info_series[32];
 	
 	gamedata_t	*gamedata_head;	// Pointer to the start of the gamedata list, so we can restore it
-	gamedata_t	*selected_game;	// Gamedata object for the currently selected line
-	//launchdat_t	*launchdat;		// Metadata object representing the launch.dat file for this game
 	
 	// Store gamedata head
 	gamedata_head = gamedata;

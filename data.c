@@ -344,7 +344,6 @@ int getIni(config_t *config, int verbose){
 	
 	int status;
 	char my_drive;
-	char my_drive_letter;
 	char my_dir[DIR_BUFFER_SIZE];
 	char my_path[DIR_BUFFER_SIZE];
 	
