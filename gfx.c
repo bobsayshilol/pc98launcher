@@ -569,7 +569,7 @@ int gfx_Puts(int x, int y, fontdata_t *fontdata, char *c){
 	vram = vram_buffer + start_offset;
 	
 	if (GFX_VERBOSE){
-		printf("%s.%d\t Displaying string: [%s] at vram offset 0x%x\n", __FILE__, __LINE__, c, vram);
+		printf("%s.%d\t Displaying string: [%s] at vram offset 0x%x\n", __FILE__, __LINE__, c, (unsigned)vram);
 		printf("%s.%d\t Displaying string: [%s] at screen co-ords %d,%d\n", __FILE__, __LINE__, c, x, y);
 	}
 		

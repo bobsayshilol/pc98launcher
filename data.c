@@ -397,7 +397,7 @@ int getImageList(launchdat_t *launchdat, imagefile_t *imagefile){
 		p = strtok(buffer, ",; ");
 		while (p != NULL){
 			if (DATA_VERBOSE){
-				printf("%s.%d\t Extracted image filename [%s], %d len\n", __FILE__, __LINE__, p, strlen(p));
+				printf("%s.%d\t Extracted image filename [%s], %ld len\n", __FILE__, __LINE__, p, strlen(p));
 			}
 			found++;
 			imagefile = getLastImage(imagefile);

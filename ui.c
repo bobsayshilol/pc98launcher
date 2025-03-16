@@ -1003,7 +1003,7 @@ int ui_UpdateInfoPane(state_t *state, gamedata_t *gamedata, launchdat_t *launchd
 					printf("%s.%d\t Info - start file: [%s]\n", __FILE__, __LINE__, launchdat->start);
 					printf("%s.%d\t Info - alt_start file: [%s]\n", __FILE__, __LINE__, launchdat->alt_start);
 					printf("%s.%d\t Info - midi: [%d]\n", __FILE__, __LINE__, launchdat->midi);
-					printf("%s.%d\t Info - midi serial: [%s]\n", __FILE__, __LINE__, launchdat->midi_serial);
+					printf("%s.%d\t Info - midi serial: [%d]\n", __FILE__, __LINE__, launchdat->midi_serial);
 				}
 				
 				gfx_Bitmap(ui_checkbox_has_metadata_xpos, ui_checkbox_has_metadata_ypos, ui_checkbox_bmp);
