@@ -109,10 +109,10 @@ int isDir(char *path){
 	dir = opendir(path);
 	if (dir != NULL){
 		dir_type = 1;
+		closedir(dir);
 	} else {
 		dir_type = 0;	
 	}
-	closedir(dir);
 	return dir_type;
 }
 
