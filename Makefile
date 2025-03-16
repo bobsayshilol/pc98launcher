@@ -34,7 +34,7 @@ $(TARGET):  $(OBJFILES)
 	copy $(TARGET) $(DEST)
 
 bmp.o: bmp.c
-	gcc.exe $(CFLAGS) -c bmp.c bmp.o
+	gcc.exe $(CFLAGS) -c bmp.c -o bmp.o
 	
 data.o: data.c
 	gcc.exe $(CFLAGS) -c data.c -o data.o
