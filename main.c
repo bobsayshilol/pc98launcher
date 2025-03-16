@@ -1046,6 +1046,7 @@ int main() {
 						}
 						imagefile = (imagefile_t *) malloc(sizeof(imagefile_t));
 						imagefile->next = NULL;
+						imagefile->prev = NULL;
 						imagefile_head = imagefile;
 						status = getImageList(launchdat, imagefile);
 						if (status > 0){
