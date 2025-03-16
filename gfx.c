@@ -186,7 +186,7 @@ void gfx_Flip(){
 	// Copy a buffer of GFX_ROWS * GFX_COLS bytes to
 	// the active VRAM framebuffer for display.
 	
-	movedata(_my_ds(), vram_buffer, vram_dpmi_selector, 0, (GFX_ROWS * GFX_COLS));
+	movedata(_my_ds(), (unsigned)vram_buffer, vram_dpmi_selector, 0, (GFX_ROWS * GFX_COLS));
 }
 
 int gfx_GetXYaddr(int x, int y){

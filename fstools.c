@@ -204,7 +204,7 @@ int findDirs(char *path, gamedata_t *gamedata, int startnum, config_t *config){
 			dir = opendir(path);
 			if (dir != NULL){
 				// Read an entry for the directory entry
-				while (de = readdir(dir)){
+				while ((de = readdir(dir)) != NULL){
 					// Skip any names that are "." and ".."
 					if (strcmp(de->d_name, ".") != 0 && strcmp(de->d_name, "..") != 0){
 						// Only process entries that are of type DT_DIR (e.g. sub-directory names)						

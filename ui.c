@@ -990,7 +990,7 @@ int ui_UpdateInfoPane(state_t *state, gamedata_t *gamedata, launchdat_t *launchd
 				sprintf(info_year, "N/A");
 				sprintf(info_company, " N/A");
 				sprintf(info_genre, "N/A");
-				sprintf(info_series, "");
+				sprintf(info_series, "N/A");
 				sprintf(info_path, " %s", state->selected_game->path);
 			} else {
 				// ======================

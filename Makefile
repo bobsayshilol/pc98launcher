@@ -16,8 +16,10 @@ INCLUDES 	=
 ASM_FLAGS 		= -mcpu=i486 -march=i486
 ASM_FLAGS_386 	= -mcpu=i386 -march=i386
 LDFLAGS 			=
-CFLAGS 			= -mcpu=i486 -march=i486 -fomit-frame-pointer -ffast-math #-O2
-CFLAGS_386		= -mcpu=i386 -march=i386 -fomit-frame-pointer -ffast-math #-O2
+WARNINGS		= -Wall -Werror
+OPT			= -fomit-frame-pointer -ffast-math #-O2
+CFLAGS 			= -mcpu=i486 -march=i486 $(WARNINGS) $(OPT)
+CFLAGS_386		= -mcpu=i386 -march=i386 $(WARNINGS) $(OPT)
 CFLAGS_DEBUG		= -g
 LDSCRIPT 		=
 OCFLAGS			=

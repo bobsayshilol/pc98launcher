@@ -26,10 +26,14 @@
 #include "filter.h"
 #include "ui.h"
 
+static int qsort_strcmp(const void *lhs, const void *rhs) {
+	return strcmp(lhs, rhs);
+}
+
 int sortFilterKeys(state_t *state, int items){
 	// Sort the list of filter keys by name
 	
-	qsort(state->filter_strings, items, MAX_STRING_SIZE, strcmp);
+	qsort(state->filter_strings, items, MAX_STRING_SIZE, qsort_strcmp);
 	return FILTER_OK;
 }
 
