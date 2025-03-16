@@ -18,7 +18,9 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <dos.h>
 #include <dirent.h>
+#include <unistd.h>
 
 #ifndef __HAS_DATA
 #include "data.h"

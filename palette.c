@@ -26,6 +26,8 @@
 #include "pegc.h"
 #include "palette.h"
 
+static int pal_BMPRemap(bmpdata_t *bmpdata);
+
 int pal_BMP2Palette(bmpdata_t *bmpdata, int reserved){
 	// Set palette entries based on a specific bmpdata structure
 	// restricted == 1 if we are setting the 32 reserved colours of the user interface

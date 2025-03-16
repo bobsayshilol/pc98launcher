@@ -22,6 +22,8 @@
 #include <dos.h>
 #include <go32.h>
 #include <dpmi.h>
+#include <sys/nearptr.h>
+#include <sys/farptr.h>
 
 #include "gfx.h"
 #include "pegc.h"
@@ -30,6 +32,9 @@
 #include "bmp.h"
 #define __HAS_BMP
 #endif
+
+static int gfx_DPMI();
+static int gfx_HasMemoryHole();
 
 int gfx_Init(){
 	// Initialise graphics to a set of configured defaults

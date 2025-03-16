@@ -34,6 +34,7 @@
 int 		dirFromPath(char *path, char *buffer);
 int 		dirHasData(char *path);
 int 		drvLetterToNum(char drive_letter);
+char		drvLetterFromPath(char *path);
 char		drvNumToLetter(int drive_number);
 int 		findDirs(char *path, gamedata_t *gamedata, int startnum, config_t *config);
 int 		isDir(char *path);

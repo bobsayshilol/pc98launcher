@@ -57,3 +57,4 @@ int 		pal_BMP2Palette(bmpdata_t *bmpdata, int reserved);
 void 	pal_ResetAll();
 void 	pal_ResetFree();
 void 	pal_Set(unsigned char idx, unsigned char r, unsigned char g, unsigned char b);
+void	pal_SetUI();

@@ -19,6 +19,7 @@
 #include <string.h>
 #include <stdlib.h>
 #include <dos.h>
+#include <unistd.h>
 
 #include "ini.h"
 #ifndef __HAS_DATA

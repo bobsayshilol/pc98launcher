@@ -61,3 +61,4 @@ int		gfx_GetXYaddr(int x, int y);
 int		gfx_Init();
 void		gfx_TextOff();
 void		gfx_TextOn();
+int		gfx_Puts(int x, int y, fontdata_t *fontdata, char *c);

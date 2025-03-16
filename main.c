@@ -18,6 +18,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
+#include <conio.h>
+#include <unistd.h>
 
 #ifndef __HAS_DATA
 #include "data.h"
@@ -414,7 +416,7 @@ int main() {
 							gamedata = gamedata->next;
 					}
 					gamedata = gamedata_head;
-					close(savefile);
+					fclose(savefile);
 			}
 	} else {
 			ui_ProgressMessage("Not saving game list...");

@@ -18,6 +18,7 @@
 #include <stdio.h>
 #include <pc.h>
 #include <dos.h>
+#include <libc/pc9800.h>
 
 #include "input.h"
 
