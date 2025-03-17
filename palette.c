@@ -26,6 +26,11 @@
 #include "pegc.h"
 #include "palette.h"
 
+
+static unsigned int free_palettes_used;			// Current number of palette entries used
+static unsigned int reserved_palettes_used;		// Current number of palette entries used
+
+
 static int pal_BMPRemap(bmpdata_t *bmpdata);
 
 int pal_BMP2Palette(bmpdata_t *bmpdata, int reserved){

@@ -41,11 +41,6 @@
 #define GFX_TEXT_OK           		-252 // Output of text data ok
 #define GFX_TEXT_INVALID      		-251 // Attempted output of an unsupported font glyph (too wide, too heigh, etc)
 
-unsigned char	*vram;				// Pointer to a location in the local graphics buffer
-unsigned char	vram_buffer[(GFX_ROW_SIZE * GFX_COL_SIZE)];
-__dpmi_meminfo	vram_dpmi;			// DPMI descriptor for far-memory location of framebuffer
-int				vram_dpmi_selector;	// Memory region selector handle
-
 /* **************************** */
 /* Function prototypes */
 /* **************************** */

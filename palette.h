@@ -49,10 +49,6 @@
 #define PALETTE_UI_15			PALETTES_FREE + PALETTES_RESERVED + 15
 
 
-unsigned int free_palettes_used;			// Current number of palette entries used
-unsigned int reserved_palettes_used;		// Current number of palette entries used
-
-
 int 		pal_BMP2Palette(bmpdata_t *bmpdata, int reserved);
 void 	pal_ResetAll();
 void 	pal_ResetFree();

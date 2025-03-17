@@ -33,6 +33,11 @@
 #define __HAS_BMP
 #endif
 
+static unsigned char	*vram;				// Pointer to a location in the local graphics buffer
+static unsigned char	vram_buffer[(GFX_ROW_SIZE * GFX_COL_SIZE)];
+static __dpmi_meminfo	vram_dpmi;			// DPMI descriptor for far-memory location of framebuffer
+static int				vram_dpmi_selector;	// Memory region selector handle
+
 static int gfx_DPMI();
 static int gfx_HasMemoryHole();
 
